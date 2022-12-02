@@ -28,5 +28,9 @@
 
 - Create your own local branch. When you're finished, push your branch on this repository.
 
+### API
+
+- https://opentdb.com/api_config.php
+
 
 
