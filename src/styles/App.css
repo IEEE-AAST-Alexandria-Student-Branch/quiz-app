@@ -1,0 +1,11 @@
+.App {
+    margin: 0rem !important;
+    background-image: url('/public/bg.png');
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: calc(100vh - 4rem);
+}
