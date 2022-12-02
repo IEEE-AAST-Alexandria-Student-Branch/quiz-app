@@ -26,7 +26,7 @@
 
 - **Bonus**: Try to deploy your project on any hosting platform.
 
-- Create your own local branch. When you're finished, push your branch on this repository.
+- Create your own local branch. When you're finished, push your branch on this repository. **DO NOT MERGE YOUR BRANCH WITH THE `main` BRANCH**.
 
 ### API
 
