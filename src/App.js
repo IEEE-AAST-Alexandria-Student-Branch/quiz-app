@@ -1,9 +1,9 @@
-import Hero from "./components/Hero/Hero";
 import "./styles/App.css";
+import { Outlet } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-      <Hero />
+      <Outlet />
     </div>
   );
 }

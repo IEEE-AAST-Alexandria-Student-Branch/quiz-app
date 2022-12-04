@@ -1,21 +1,26 @@
 import React, { useState } from 'react'
 import './Navbar.styles.css'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   const [expandNavbar, setExpandNavbar] = useState(false)
+
+  const handleNavbarClick = () => {
+    setExpandNavbar(!expandNavbar) 
+  }
 
   return (
     <>
       <nav>
         <div className='logo'>
           <img src={'/lamp.png'} width={48} height={48} alt={'logo'} />
-          <a href='/'>
+          <Link to={'/'}>
             <h1>Quizz App</h1>
-          </a>
+          </Link>
         </div>
         <div className='links'>
-          <a href='/'>Sign in</a>
-          <a href='/'>Resgister</a>
+          <Link to={'signin'}>Sign in</Link>
+          <Link to={'register'}>Register</Link>
         </div>
         <button
           className="hamburger"
@@ -28,14 +33,14 @@ export default function Navbar() {
       </nav>
       <div
         className={
-          expandNavbar ? "mobileNavbar" : "mobileNavbarOnPC"
+          expandNavbar ? "mobileNavbar" : "hideMobileNavbar"
         }
       >
         <hr />
 
         <div className='mobileLinks'>
-          <a href='/'>Sign in</a>
-          <a href='/'>Resgister</a>
+          <Link onClick={handleNavbarClick} to={'signin'}>Sign in</Link>
+          <Link onClick={handleNavbarClick} to={'register'}>Register</Link>
         </div>
 
       </div>

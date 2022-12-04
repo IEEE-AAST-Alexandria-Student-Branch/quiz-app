@@ -1,0 +1,71 @@
+.Signin-Wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40rem;
+    margin: auto;
+    margin-top: 4rem;
+}
+
+.Signin{
+    width: 100%;
+}
+.Signin h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 3.5rem;
+    margin-top: .6rem;
+    margin-bottom: 1rem;
+}
+
+.Signin .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: start;
+    row-gap: .8rem;
+}
+
+.Signin .form button {
+    margin-top: 1.5rem;
+}
+.Signin .form input {
+    width: 25vw;
+}
+
+@media (max-width: 1023px) {
+    .Signin-Wrapper {
+        display: block;
+        margin-top: 0rem;
+    }
+    .Signin h1 {
+        color: #fff;
+        text-align: center;
+        font-size: 3.5rem;
+        margin-top: .6rem;
+        margin-bottom: 1rem;
+    }
+
+    .Signin .form {
+        align-items: center;
+        width: 100%;
+        text-align: start;
+        row-gap: .8rem;
+
+    }
+
+    .Signin .form label {
+        align-self: flex-start;
+    }
+
+    .Signin .form button {
+        margin-top: 1.5rem;
+    }
+    .Signin .form input {
+        width: 100%;
+    }
+    .Signin-Wrapper img {
+        display: none;
+    }
+}

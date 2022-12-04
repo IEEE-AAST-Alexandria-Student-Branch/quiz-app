@@ -1,0 +1,71 @@
+.Register-Wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40rem;
+    margin: auto;
+    margin-top: 4rem;
+}
+
+.Register{
+    width: 100%;
+}
+.Register h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 3.5rem;
+    margin-top: .6rem;
+    margin-bottom: 1rem;
+}
+
+.Register .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: start;
+    row-gap: .8rem;
+}
+
+.Register .form button {
+    margin-top: 1.5rem;
+}
+.Register .form input {
+    width: 25vw;
+}
+
+@media (max-width: 1023px) {
+    .Register-Wrapper {
+        display: block;
+        margin-top: 0rem;
+    }
+    .Register h1 {
+        color: #fff;
+        text-align: center;
+        font-size: 3.5rem;
+        margin-top: .6rem;
+        margin-bottom: 1rem;
+    }
+
+    .Register .form {
+        align-items: center;
+        width: 100%;
+        text-align: start;
+        row-gap: .8rem;
+
+    }
+
+    .Register .form label {
+        align-self: flex-start;
+    }
+
+    .Register .form button {
+        margin-top: 1.5rem;
+    }
+    .Register .form input {
+        width: 100%;
+    }
+    .Register-Wrapper img {
+        display: none;
+    }
+}
