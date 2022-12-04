@@ -41,7 +41,7 @@
     .Signin h1 {
         color: #fff;
         text-align: center;
-        font-size: 3.5rem;
+        font-size: 3rem;
         margin-top: .6rem;
         margin-bottom: 1rem;
     }
@@ -51,18 +51,22 @@
         width: 100%;
         text-align: start;
         row-gap: .8rem;
-
     }
-
+    
     .Signin .form label {
+        font-size: 1rem;
         align-self: flex-start;
     }
 
     .Signin .form button {
         margin-top: 1.5rem;
+        font-size: 1.3rem;
     }
     .Signin .form input {
-        width: 100%;
+        width: 95%;
+    }
+    .Signin .form input::placeholder {
+        font-size: 1.2rem;
     }
     .Signin-Wrapper img {
         display: none;

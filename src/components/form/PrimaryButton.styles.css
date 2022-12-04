@@ -1,4 +1,4 @@
-button {
+.primary-btn button {
     background-color: #f1216c;
     border: none;
     color: white;
@@ -11,11 +11,11 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.primary-btn button:hover {
     background-color: #be1a55;
     transition: ease-in-out .2s;
 }
 
-button:active {
+.primary-btn button:active {
     background-color: #710f32;
 }

@@ -71,7 +71,7 @@ nav {
     font-weight: 500;
     padding: .6rem;
 }
-.mobileLinks a:active{
+.mobileLinks a:focus{
     color: #1976d2;
     background: transparent;
 }
