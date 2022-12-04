@@ -12,7 +12,7 @@ export default function Signin() {
           <form className='form'>
             <Input label={"Email"} />
             <Input label={"Password"} />
-            <PrimaryButton content={'Signin'} />
+            <PrimaryButton content={'Sign in'} />
           </form>
         </div>
         <div>

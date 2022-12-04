@@ -14,7 +14,7 @@ export default function Register() {
           <Input label={"Last Name"} />
           <Input label={"Email"} />
           <Input label={"Password"} />
-          <Input label={"Re-type Password"} />
+          <Input label={"Re-type Password"} placeholder={"Re-type Your Password"} />
           <PrimaryButton content={'Register'} />
         </form>
       </div>

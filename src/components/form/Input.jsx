@@ -5,7 +5,7 @@ export default function Input({ type, placeholder, label }) {
     return (
         <>
             <label htmlFor='input'>{label || "label"}</label>
-            <input id='input' type={type || "text"} placeholder={placeholder || "placeholder"} />
+            <input id='input' type={type || "text"} placeholder={placeholder || `Enter your ${label}`} />
         </>
     )
 }
