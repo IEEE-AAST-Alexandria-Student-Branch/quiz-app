@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import './Navbar.styles.css'
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 export default function Navbar() {
   const [expandNavbar, setExpandNavbar] = useState(false)
 
   const handleNavbarClick = () => {
-    setExpandNavbar(!expandNavbar) 
+    setExpandNavbar(!expandNavbar)
   }
 
   return (
@@ -19,8 +19,8 @@ export default function Navbar() {
           </Link>
         </div>
         <div className='links'>
-          <Link to={'signin'}>Sign in</Link>
-          <Link to={'register'}>Register</Link>
+          <NavLink style={({ isActive }) => { return { color: isActive ? '#fff' : '' } }} to={'signin'}>Sign in</NavLink>
+          <NavLink style={({ isActive }) => { return { color: isActive ? '#fff' : '' } }} to={'register'}>Register</NavLink>
         </div>
         <button
           className="hamburger"
