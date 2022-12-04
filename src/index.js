@@ -4,9 +4,11 @@ import "./styles/index.css";
 import Layout from "./Layout";
 import App from './App';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Register from "./Register";
-import Signin from './Signin';
+import Register from "./pages/Register";
+import Signin from './pages/Signin';
 import Home from './components/Home/Home';
+import Begin from './pages/Begin';
+import Start from "./pages/Start";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,8 +18,10 @@ root.render(
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<App />} >
             <Route path="/" index element={<Home />} />
-            <Route path="Register" index element={<Register />} />
-            <Route path="signin" index element={<Signin />} />
+            <Route path="/begin" element={<Begin />} />
+            <Route path="/start" element={<Start />} />
+            <Route path="/register" index element={<Register />} />
+            <Route path="/signin" index element={<Signin />} />
           </Route>
         </Route>
       </Routes>

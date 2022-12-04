@@ -1,6 +1,7 @@
 import React from 'react'
 import PrimaryButton from '../form/PrimaryButton'
 import './Home.styles.css'
+import { Link } from 'react-router-dom';
 
 export default function Home() {
     return (
@@ -8,7 +9,9 @@ export default function Home() {
             <div className='intro-section'>
                 <h1>Quizz App</h1>
                 <div>
-                <PrimaryButton content={'begin'}/>
+                    <Link to={'/begin'}>
+                        <PrimaryButton content={'begin'} />
+                    </Link>
                 </div>
             </div>
             <img src={'/lamp.png'} alt={'logo'} />

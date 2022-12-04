@@ -1,8 +1,8 @@
 import React from 'react'
-import PrimaryButton from './components/form/PrimaryButton'
-import Input from './components/form/Input';
+import PrimaryButton from '../components/form/PrimaryButton'
+import Input from '../components/form/Input';
 import { useForm } from "react-hook-form";
-import './styles/Signin.style.css'
+import '../styles/Signin.style.css'
 
 export default function Signin() {
 

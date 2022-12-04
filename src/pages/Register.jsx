@@ -1,8 +1,8 @@
 import React from 'react'
-import Input from './components/form/Input'
-import PrimaryButton from './components/form/PrimaryButton'
+import Input from '../components/form/Input'
+import PrimaryButton from '../components/form/PrimaryButton'
 import { useForm } from "react-hook-form";
-import './styles/Register.style.css'
+import '../styles/Register.style.css'
 
 
 
