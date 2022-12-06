@@ -1,5 +1,5 @@
 import React from 'react'
-import PrimaryButton from '../form/PrimaryButton'
+import PrimaryButton from '../Form/PrimaryButton'
 import './Home.styles.css'
 import { Link } from 'react-router-dom';
 
@@ -9,8 +9,8 @@ export default function Home() {
             <div className='intro-section'>
                 <h1>Quizz App</h1>
                 <div>
-                    <Link to={'/begin'}>
-                        <PrimaryButton content={'begin'} />
+                    <Link to={'/start'}>
+                        <PrimaryButton content={'Start'} />
                     </Link>
                 </div>
             </div>

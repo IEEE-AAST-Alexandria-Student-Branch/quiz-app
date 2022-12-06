@@ -6,7 +6,7 @@
     background-size: cover; 
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     height: calc(100vh - 4rem);
     overflow: auto;
     padding: 3rem;

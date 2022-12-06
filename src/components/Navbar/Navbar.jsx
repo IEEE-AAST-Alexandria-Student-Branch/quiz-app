@@ -1,14 +1,28 @@
 import React, { useState } from 'react'
 import './Navbar.styles.css'
 import { NavLink, Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux';
+import { setActiveUser, setSignOutState } from '../../features/users/userSlice';
 
 export default function Navbar() {
   const [expandNavbar, setExpandNavbar] = useState(false)
+
+
+  const user = useSelector(state => state.user)
+  console.log(user)
 
   const handleNavbarClick = () => {
     setExpandNavbar(!expandNavbar)
   }
 
+  // const dispatch = useDispatch()
+  // dispatch(setActiveUser(
+  //   {
+  //     firstName: 'John',
+  //     lastName: 'Doe',
+  //     email: 'asd@asd.asd'
+  //   }
+  // ))
   return (
     <>
       <nav>
@@ -19,8 +33,14 @@ export default function Navbar() {
           </Link>
         </div>
         <div className='links'>
-          <NavLink style={({ isActive }) => { return { color: isActive ? '#fff' : '' } }} to={'signin'}>Sign in</NavLink>
-          <NavLink style={({ isActive }) => { return { color: isActive ? '#fff' : '' } }} to={'register'}>Register</NavLink>
+          {
+            user.firstName ? (<NavLink style={({ isActive }) => { return { color: isActive ? '#fff' : '' } }} to={''}>Logout</NavLink>) : (
+              <>
+                <NavLink style={({ isActive }) => { return { color: isActive ? '#fff' : '' } }} to={'/signin'}>Sign in</NavLink>
+                <NavLink style={({ isActive }) => { return { color: isActive ? '#fff' : '' } }} to={'/register'}>Register</NavLink>
+              </>
+            )
+          }
         </div>
         <button
           className="hamburger"

@@ -1,6 +1,6 @@
 import React from 'react'
-import PrimaryButton from '../components/form/PrimaryButton'
-import Input from '../components/form/Input';
+import PrimaryButton from '../components/Form/PrimaryButton'
+import Input from '../components/Form/Input';
 import { useForm } from "react-hook-form";
 import '../styles/Signin.style.css'
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import './Selector.styles.css'
 
-export default function Begin() {
+export default function Start() {
     const levels = [
         { id: 1, name: 'Easy' },
         { id: 2, name: 'Medium' },
@@ -12,9 +12,9 @@ export default function Begin() {
 
     console.log(level)
     return (
-        <div>
-            <select className='Selector' value={level} onChange={(e) => setLevel(e.target.value)} >
-                <option value={null}>Level</option>
+        <form>
+            <select className='Selector' value={level} onChange={(e) => setLevel(e.target.value)} required>
+                <option value={''}>Level</option>
                 {
                     levels.map(({ name, id }) => {
                         return (
@@ -23,6 +23,6 @@ export default function Begin() {
                     })
                 }
             </select>
-        </div>
+        </form>
     )
 }

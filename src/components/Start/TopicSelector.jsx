@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import './Selector.styles.css'
 
-export default function Begin() {
+export default function Start() {
     const [categories, setCategories] = useState([]);
     const [category, setCategory] = useState("");
 
@@ -20,7 +20,7 @@ export default function Begin() {
     console.log(category)
     return (
         <div>
-            <select className='Selector' value={category} onChange={(e) => setCategory(e.target.value)} >
+            <select className='Selector' value={category} onChange={(e) => setCategory(e.target.value)} required>
                 <option value={null}>Topic</option>
                 {
                     categories.map(({ name, id }) => {

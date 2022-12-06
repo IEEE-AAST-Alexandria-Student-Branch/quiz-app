@@ -7,25 +7,30 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Register from "./pages/Register";
 import Signin from './pages/Signin';
 import Home from './components/Home/Home';
-import Begin from './pages/Begin';
-import Start from "./pages/Start";
+import Start from './pages/Start';
+import Questions from './pages/Questions';
+import { Provider } from "react-redux";
+import store from "./store";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="/" element={<App />} >
-            <Route path="/" index element={<Home />} />
-            <Route path="/begin" element={<Begin />} />
-            <Route path="/start" element={<Start />} />
-            <Route path="/register" index element={<Register />} />
-            <Route path="/signin" index element={<Signin />} />
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route path="/" element={<App />} >
+              <Route path="/" index element={<Home />} />
+              <Route path="/start" element={<Start />} />
+              <Route path="/questions" element={<Questions />} />
+              <Route path="/register" index element={<Register />} />
+              <Route path="/signin" index element={<Signin />} />
+            </Route>
           </Route>
-        </Route>
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 
