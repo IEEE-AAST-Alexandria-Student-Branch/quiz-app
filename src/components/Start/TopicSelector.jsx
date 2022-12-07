@@ -17,7 +17,6 @@ export default function Start() {
         getCategories()
     }, []);
 
-    console.log(category)
     return (
         <div>
             <select className='Selector' value={category} onChange={(e) => setCategory(e.target.value)} required>

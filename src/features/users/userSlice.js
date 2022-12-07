@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    firstName: null,
-    lastName: null,
+    displayName: null,
     email: null,
+    accessToken: null
 }
 
 const userSlice = createSlice({
@@ -12,16 +12,17 @@ const userSlice = createSlice({
     reducers: {
         setActiveUser: (state, action) => {
 
-            const { firstName, lastName, email } = action.payload
+            const { displayName, email, accessToken } = action.payload
 
-            state.firstName = firstName;
-            state.lastName = lastName;
+            state.displayName = displayName;
             state.email = email;
+            state.accessToken = accessToken;
         },
         setSignOutState: (state) => {
-            state.firstName = null;
-            state.lastName = null;
+            state.displayName = null;
             state.email = null;
+            state.accessToken = null;
+
         }
     }
 });

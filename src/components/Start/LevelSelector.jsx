@@ -10,7 +10,6 @@ export default function Start() {
     ]
     const [level, setLevel] = useState("");
 
-    console.log(level)
     return (
         <form>
             <select className='Selector' value={level} onChange={(e) => setLevel(e.target.value)} required>
