@@ -2,22 +2,23 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const questionsSlice = createSlice({
     name: "questions",
-    initialState: {
-        questions: [
-            { id: 1, content: "asfasfa" },
-            { id: 2, content: "asfasfa" },
-            { id: 3, content: "asfasfa" }
-        ],
-        currentQuestion: 0,
-        score: 0,
-        topic: "",
-        difficulty: "",
-        loading: false,
-        error: false,
-    },
+    initialState: 
+        {
+            question: null,
+            correct_answer: null,
+            incorrect_answers: [null]
+        }
+    ,
     reducers: {
         setQuestions: (state, action) => {
-            state.questions = action.payload;
+            return [
+            
+                    ...state.slice(0, action.index),
+                    ...action.payload,
+                    ...state.slice(action.index),
+                
+
+            ]
         }
     }
 });

@@ -1,8 +1,8 @@
 import React from 'react'
 import './PrimaryButton.styles.css'
 
-export default function PrimaryButton({ content, color }) {
+export default function PrimaryButton({ content, color, onClick }) {
     return (
-        <button className='primary-btn' style={{ "backgroundColor": color }}>{content || `Primary`}</button>
+        <button onClick={onClick} className='primary-btn' style={{ "backgroundColor": color }}>{content || `Primary`}</button>
     )
 }

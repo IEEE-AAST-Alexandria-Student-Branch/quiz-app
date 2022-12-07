@@ -6,8 +6,10 @@ import { useDispatch } from 'react-redux';
 import { setActiveUser } from '../../features/users/userSlice';
 
 export default function Start() {
+
     const [categories, setCategories] = useState([]);
     const [topic, setTopic] = useState(null);
+    const dispatch = useDispatch()
 
     const getCategories = async () => {
         await fetch('https://opentdb.com/api_category.php')
@@ -15,22 +17,17 @@ export default function Start() {
             .then(data => setCategories(data.trivia_categories))
     }
 
-    const dispatch = useDispatch()
     useEffect(() => {
         getCategories()
     }, []);
-    
-    useEffect(() => {
-        dispatch(
-            setActiveUser({
-                topic
-            })
-        )
-    }, [topic]);
+
 
     return (
         <div>
-            <select className='Selector' value={topic} onChange={(e) => setTopic(e.target.value)} required>
+            <select className='Selector' value={topic}
+                onChange={(e) =>
+                    dispatch(setActiveUser({topic:e.target.value}))} 
+                    required>
                 <option value={null}>Topic</option>
                 {
                     categories.map(({ name, id }) => {

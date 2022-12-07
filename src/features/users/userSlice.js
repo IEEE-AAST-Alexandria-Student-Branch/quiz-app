@@ -14,25 +14,17 @@ const userSlice = createSlice({
     initialState,
     reducers: {
         setActiveUser: (state, action) => {
+            return {
+                ...state,
+                ...action.payload
+            }
 
-            const { displayName, email, accessToken, topic, level, score } = action.payload
-
-            state.displayName = displayName;
-            state.email = email;
-            state.accessToken = accessToken;
-            state.topic = topic;
-            state.level = level;
-            state.score = score;
         },
         setSignOutState: (state) => {
-
-            state.displayName = null;
-            state.email = null;
-            state.accessToken = null;
-            state.topic = null;
-            state.level = null;
-            state.score = null;
-
+            return {
+                ...state,
+                ...initialState
+            }
         }
     }
 });

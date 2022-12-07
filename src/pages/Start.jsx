@@ -4,10 +4,15 @@ import LevelSelector from '../components/Start/LevelSelector'
 import '../styles/Start.styles.css'
 import PrimaryButton from '../components/Form/PrimaryButton'
 import { Link } from 'react-router-dom';
-import {} from "@reduxjs/toolkit"
+import { } from "@reduxjs/toolkit"
+import { useSelector } from 'react-redux';
 
 
 export default function Start() {
+
+    const handleSubmit = () => {
+        console.log('clicked')
+    }
     return (
         <div className='main'>
             <section className='Start'>
@@ -23,7 +28,7 @@ export default function Start() {
             <div>
                 <Link to={'/questions'}>
 
-                    <PrimaryButton content={'Start!'} />
+                    <PrimaryButton content={'Start!'} onClick={() => { handleSubmit() }} />
                 </Link>
 
             </div>
