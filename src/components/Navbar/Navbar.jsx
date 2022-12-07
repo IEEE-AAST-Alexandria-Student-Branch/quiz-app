@@ -3,6 +3,7 @@ import './Navbar.styles.css'
 import { NavLink, Link, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import { setSignOutState } from '../../features/users/userSlice';
+import { useEffect } from 'react';
 
 export default function Navbar() {
   const [expandNavbar, setExpandNavbar] = useState(false)

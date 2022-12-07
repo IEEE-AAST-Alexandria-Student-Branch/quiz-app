@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 
 export default function Questions() {
   const questions = useSelector(state => state.questions.questions)
-
+  console.log(questions)
   return (
     <div>
       <h1>Questions</h1>
