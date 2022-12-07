@@ -11,6 +11,7 @@ import Start from './pages/Start';
 import Questions from './pages/Questions';
 import { Provider } from "react-redux";
 import store from "./store";
+import ProtectedRoutes from "./ProtectedRoutes";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -20,14 +21,21 @@ root.render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
+          
             <Route path="/" element={<App />} >
               <Route path="/" index element={<Home />} />
-              <Route path="/start" element={<Start />} />
-              <Route path="/questions" element={<Questions />} />
               <Route path="/register" index element={<Register />} />
               <Route path="/signin" index element={<Signin />} />
+              
+              <Route element={<ProtectedRoutes/>}>
+                <Route path="/start" element={<Start />} />
+                <Route path="/questions" element={<Questions />} />
+              </Route>
+
             </Route>
           </Route>
+
+
         </Routes>
       </BrowserRouter>
     </Provider>

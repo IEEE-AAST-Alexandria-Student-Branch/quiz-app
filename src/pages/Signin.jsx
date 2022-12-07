@@ -28,6 +28,7 @@ export default function Signin() {
                             { displayName, email, accessToken }
                         )
                     )
+                    localStorage.setItem('quizzAppAccessToken', accessToken)
                 })
             navigate('/start')
         } catch (error) {
