@@ -42,7 +42,7 @@ export default function Signin() {
                     <Input label={"Password"} type={'password'} props={{ ...register('password', registerOptions.password) }} />
                     {errors?.password && errors.password.message}
                     
-                    {loginErrMsg === 'Firebase: Error (auth/wrong-password).' ? 'Worng Password' : 'Wrong Password'}
+                    {loginErrMsg === 'Firebase: Error (auth/wrong-password).' ? 'Worng Password' : null}
                     <PrimaryButton content={'Sign in'} />
                 </form>
             </div>
