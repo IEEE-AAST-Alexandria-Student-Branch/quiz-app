@@ -2,25 +2,22 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const questionsSlice = createSlice({
     name: "questions",
-    initialState: 
-        {
-            question: null,
-            correct_answer: null,
-            incorrect_answers: [null]
-        }
+    initialState: [
+    ]
     ,
     reducers: {
         setQuestions: (state, action) => {
             return [
-            
-                    ...state.slice(0, action.index),
-                    ...action.payload,
-                    ...state.slice(action.index),
-                
+
+                ...state,
+                ...action.payload,
+
 
             ]
         }
     }
 });
+
+export const { setQuestions } = questionsSlice.actions;
 
 export default questionsSlice.reducer;
