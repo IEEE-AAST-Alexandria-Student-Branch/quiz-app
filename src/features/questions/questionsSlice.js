@@ -2,18 +2,14 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const questionsSlice = createSlice({
     name: "questions",
-    initialState: [
-    ]
+    initialState: []
     ,
     reducers: {
         setQuestions: (state, action) => {
             return [
-
                 ...state,
                 ...action.payload,
-
-
-            ]
+            ];
         }
     }
 });

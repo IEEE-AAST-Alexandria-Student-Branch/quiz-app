@@ -1,0 +1,27 @@
+
+.questions{
+    text-align: start;
+}
+.answers .primary-btn {
+    background-color: #3c54d7;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+
+.answers .primary-btn:hover {
+    background-color: #2e40a3;
+    transition: ease-in-out .2s;
+}
+
+.answers .primary-btn:active {
+    background-color: #1f2b6f;
+}
