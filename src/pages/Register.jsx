@@ -51,7 +51,7 @@ export default function Register() {
 
   return (
     <section className='Register-Wrapper'>
-      <div className='Register'>
+          <div className='Register'>
         <h1>Register</h1>
 
         <form className='form' onSubmit={handleSubmit(onSubmit)}>
@@ -72,6 +72,6 @@ export default function Register() {
       <div>
         <img src={'/lamp.png'} alt={'logo'} />
       </div>
-    </section >
+    </section>
   )
 }
