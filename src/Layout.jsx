@@ -6,7 +6,7 @@ import { Outlet } from 'react-router-dom';
 const Layout = ({ children }) => {
     return (
         <div className='Layout'>
-            <Navbar className='Navbar' />
+            <Navbar className='Navbar'/>
             <Outlet />
         </div>
     )

@@ -12,6 +12,7 @@ import Questions from './pages/Questions';
 import { Provider } from "react-redux";
 import store from "./store";
 import ProtectedRoutes from "./ProtectedRoutes";
+import Score from './pages/Score';
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -29,6 +30,7 @@ root.render(
               <Route element={<ProtectedRoutes/>}>
                 <Route path="/start" element={<Start />} />
                 <Route path="/questions" element={<Questions />} />
+                <Route path="/score" element={<Score />} />
               </Route>
 
             </Route>

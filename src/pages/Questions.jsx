@@ -5,15 +5,18 @@ import { decode } from 'html-entities';
 import { setQuestions } from '../features/questions/questionsSlice'
 import PrimaryButton from './../components/Form/PrimaryButton';
 import '../styles/Questions.styles.css'
-import { async } from '@firebase/util';
+import { setActiveUser } from '../features/users/userSlice';
+import { useNavigate } from 'react-router-dom';
 
 export default function Questions() {
   // const questions = useSelector(state => state.questions.questions)
   const { topic, level } = useSelector(store => store.user)
   const storeQuestions = useSelector(store => store.questions)
-  const [questionNumber, setquestionNumber] = useState(0);
-  const [isAnswerCorrect, setisAnswerCorrect] = useState(false);
-
+  var [questionNumber, setQuestionNumber] = useState(0);
+  const [score, setScore] = useState(0);
+  const [rightBgColor, setRightBgColor] = useState('green');
+  const [wrongBgColor, setWrongBgColor] = useState('red');
+  const [BgColor, setBgColor] = useState('blue');
   const dispatch = useDispatch()
 
   const getQuestions = async () => {
@@ -53,54 +56,70 @@ export default function Questions() {
   }
 
   const handleClick = () => {
-    setquestionNumber(questionNumber + 1)
-
+    setQuestionNumber(++questionNumber)
 
   }
-  var allAnswers = [
+console.log(storeQuestions[10])
+
+  const allAnswers = [
     storeQuestions[questionNumber].correct_answer,
     ...storeQuestions[questionNumber].incorrect_answers
 
   ]
   useMemo(() => shuffleArray(allAnswers), [questionNumber])
+const navigate = useNavigate()
 
-  console.log(storeQuestions)
+  useEffect(() => {
+    if (questionNumber === 9) {
+      dispatch(setActiveUser({ score}) )
+      navigate('/score')
+      
+    }
+  }, [questionNumber]);
 
   return (
-    <div className="questions">
-      {
-        <div>
-          <h1>
-            {decode(storeQuestions[questionNumber].question)}
-          </h1>
-          <div className="answers">
-            {
 
-              allAnswers.map((answer, index) => {
-                const handleClick = (e) => {
-                  if (e.target.value === storeQuestions[questionNumber].correct_answer) {
-                    e.target.style.backgroundColor = 'green'
-                    setisAnswerCorrect(true)
-                  }
-                  else {
-                    e.target.style.backgroundColor = 'red'
-                    setisAnswerCorrect(false)
+    storeQuestions[1]? (
+      <div className="questions">
 
+        {
+          <div>
+            <h1>
+              {decode(storeQuestions[questionNumber].question)}
+            </h1>
+            <div className="answers">
+              {
+                allAnswers.map((answer, index) => {
+                  const handleClick = (e) => {
+                    if (e.target.value === storeQuestions[questionNumber].correct_answer) {
+                      e.target.style.backgroundColor = 'green'
+                      setScore(score + 1)
+                    }
+                    else {
+                      e.target.style.backgroundColor = 'red'
+
+                    }
                   }
-                }
-                return (
-                  <div className='answers' key={index}>
-                    <button value={answer} style={{ backgroundColor: '#3c54d7' }} onClick={(e) => handleClick(e)}>{decode(answer)}</button>
-                  </div>
-                )
-              })
-            }
+                  return (
+                    <div className='answers' key={index}>
+                      <button value={answer} style={{ backgroundColor: '#3c54d7' }} onClick={handleClick}>{decode(answer)}</button>
+                    </div>
+                  )
+                })
+              }
+            </div>
+
+            <PrimaryButton content={'Next'} onClick={handleClick} />
           </div>
+        }
+      </div>
+    ) : (
+      <h1>
+        {decode(storeQuestions[questionNumber].question)}
+      </h1>
+    )
 
-          <PrimaryButton content={'Next'} onClick={handleClick} />
-        </div>
-      }
-    </div>
+
 
   )
 
