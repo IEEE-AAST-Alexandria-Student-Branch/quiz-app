@@ -1,19 +1,28 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const initialState = [{
+    question: '',
+    correct_answer: '',
+    incorrect_answers: []
+}]
+
 const questionsSlice = createSlice({
     name: "questions",
-    initialState: []
+    initialState
     ,
     reducers: {
         setQuestions: (state, action) => {
             return [
-                ...state,
                 ...action.payload,
             ];
+        }
+        ,
+        clearQuestions: (state) => {
+            return initialState
         }
     }
 });
 
-export const { setQuestions } = questionsSlice.actions;
+export const { setQuestions, clearQuestions } = questionsSlice.actions;
 
 export default questionsSlice.reducer;

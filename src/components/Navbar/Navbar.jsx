@@ -4,6 +4,7 @@ import { NavLink, Link, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import { setSignOutState } from '../../features/users/userSlice';
 import { useEffect } from 'react';
+import { clearQuestions } from '../../features/questions/questionsSlice';
 
 export default function Navbar() {
   const [expandNavbar, setExpandNavbar] = useState(false)
@@ -17,6 +18,7 @@ export default function Navbar() {
   }
   const handleLogout = () => {
     dispatch(setSignOutState())
+    dispatch(clearQuestions())
     navigate('/')
   }
 
@@ -61,8 +63,16 @@ export default function Navbar() {
         <hr />
 
         <div className='mobileLinks'>
-          <Link onClick={handleNavbarClick} to={'signin'}>Sign in</Link>
-          <Link onClick={handleNavbarClick} to={'register'}>Register</Link>
+{            accessToken ? (
+              <>
+                <NavLink onClick={handleLogout} style={({ isActive }) => { return { color: isActive ? '#fff' : '' } }} to={''}>Logout</NavLink>
+              </>
+            ) : (
+              <>
+                <NavLink style={({ isActive }) => { return { color: isActive ? '#fff' : '' } }} to={'/signin'}>Sign in</NavLink>
+                <NavLink style={({ isActive }) => { return { color: isActive ? '#fff' : '' } }} to={'/register'}>Register</NavLink>
+              </>
+            )}
         </div>
 
       </div>

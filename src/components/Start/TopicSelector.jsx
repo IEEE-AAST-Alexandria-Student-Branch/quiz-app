@@ -28,7 +28,7 @@ export default function Start() {
                 onChange={(e) =>
                     dispatch(setActiveUser({topic:e.target.value}))} 
                     required>
-                <option value={null}>Topic</option>
+                <option value={''}>Topic</option>
                 {
                     categories.map(({ name, id }) => {
                         return (

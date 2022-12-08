@@ -1,8 +1,17 @@
-
-.questions{
+.questions {
     text-align: start;
 }
-.answers .primary-btn {
+
+.answers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.answers button {
     background-color: #3c54d7;
     border: none;
     color: white;
@@ -13,8 +22,7 @@
     font-size: 1.2rem;
     border-radius: .3rem;
     cursor: pointer;
-    display: flex;
-    flex-direction: row;
+
 }
 
 .answers .primary-btn:hover {

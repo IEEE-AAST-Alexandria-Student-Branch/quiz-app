@@ -10,9 +10,6 @@ import { useSelector } from 'react-redux';
 
 export default function Start() {
 
-    const handleSubmit = () => {
-        console.log('clicked')
-    }
     return (
         <div className='main'>
             <section className='Start'>
@@ -28,7 +25,7 @@ export default function Start() {
             <div>
                 <Link to={'/questions'}>
 
-                    <PrimaryButton content={'Start!'} onClick={() => { handleSubmit() }} />
+                    <PrimaryButton content={'Start!'}/>
                 </Link>
 
             </div>
