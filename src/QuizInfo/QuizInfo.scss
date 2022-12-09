@@ -1,0 +1,102 @@
+.quizInfo {
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+
+    .data {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 60%;
+
+        label {
+            font-weight: 700;
+            font-size: 50px;
+            color: #FFFFFF;
+            margin-top: 30px;
+        }
+
+        select,
+        input {
+            background: rgba(64, 64, 64, 0.21);
+            border-radius: 6px;
+            padding: 10px 20px;
+            font-weight: 500;
+            font-size: 20px;
+            color: #FFFFFF;
+            margin: 0;
+            width: 220px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            appearance: none;
+
+            option {
+
+                background: rgba(0, 0, 0, 0.3);
+                color: #fff;
+                text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+            }
+        }
+
+
+        .categories,
+        .difficulty,
+        .numberOfQuestions {
+            width: 85%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .testYourself {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 40px;
+            button {
+                background: #F1216C;
+                color: #fff;
+                border: none;
+                outline: none;
+                font-size: 30px;
+                border-radius: 6px;
+                padding: 15px 20px;
+                cursor: pointer;
+                
+                
+
+                &:hover {
+                    background: #cc1d5c;
+                }
+            }
+
+        }
+
+        h2 {
+            color: #fff;
+            text-align: center;
+            margin: 5px 120px 0 0;
+        }
+    }
+
+    img {
+        width: 35%;
+    }
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    color: #fff;
+}
+
+::placeholder {
+    color: #fff;
+}

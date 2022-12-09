@@ -1,0 +1,74 @@
+.QuestionsPage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.QuestionsPage .QuestionsPage_logo {
+  width: 30%;
+}
+
+.QuestionsPage .QuestionsPage_questios {
+  width: 60%;
+}
+
+.QuestionsPage .QuestionsPage_questios p {
+  color: #fff;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.QuestionsPage .QuestionsPage_questios .answers {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 80%;
+}
+
+.QuestionsPage .QuestionsPage_questios .answers button {
+  background: rgba(64, 64, 64, 0.21);
+  border-radius: 6px;
+  padding: 20px 20px;
+  font-weight: 500;
+  font-size: 20px;
+  color: #FFFFFF;
+  margin: 0;
+  width: 46%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: .2s !important;
+}
+
+.QuestionsPage .QuestionsPage_questios .answers button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.QuestionsPage .nextBTN {
+  width: 10%;
+  background-color: transparent !important;
+  color: rgba(255, 255, 255, 0.444);
+}
+
+.QuestionsPage .nextBTN svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 0 -50px;
+  transition: .2s;
+  background-color: none !important;
+}
+
+.QuestionsPage .nextBTN svg:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.loading_spin {
+  text-align: center;
+  color: #CC1D5C;
+  margin-top: 200px;
+}

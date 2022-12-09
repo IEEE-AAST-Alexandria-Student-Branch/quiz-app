@@ -1,0 +1,96 @@
+.QuestionsPage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+    .QuestionsPage_logo {
+        width: 30%;
+
+    }
+
+    .QuestionsPage_questios {
+        width: 60%;
+        transition: .5s;
+        p {
+            color: #fff;
+            font-weight: 600;
+            font-size: 40px;
+        }
+
+        .answers {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            width: 80%;
+
+            button {
+                background: #40404036;
+                border-radius: 6px;
+                padding: 20px 20px;
+                font-weight: 500;
+                font-size: 20px;
+                color: #FFFFFF;
+                margin: 0;
+                width: 46%;
+                box-shadow: #32325d40 0px 13px 27px -5px, #0000004d 0px 8px 16px -8px;
+                transition: .2s !important;
+
+                &:hover {
+                    transform: scale(1.1) !important;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .nextBTN {
+        width: 10%;
+        background-color: transparent !important;
+        color: rgba(255, 255, 255, 0.444);
+
+        svg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0 0 -50px;
+            transition: .2s;
+            background-color: none !important;
+
+            &:hover {
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+.loading_spin {
+    text-align: center;
+    color: #CC1D5C;
+    margin-top: 200px;
+}
+
+.finishBTN {
+    button {
+        margin-top: 50px;
+        background: #F1216C;
+        color: #fff;
+        border: none;
+        outline: none;
+        font-size: 30px;
+        border-radius: 6px;
+        padding: 15px 20px;
+        cursor: pointer;
+        width: 15%;
+
+        &:hover {
+            background: #cc1d5c;
+        }
+    }
+
+}

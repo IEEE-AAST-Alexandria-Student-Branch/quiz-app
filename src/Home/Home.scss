@@ -1,0 +1,43 @@
+.home {
+    padding: 0 40px;
+
+    .intro {
+        width: 95%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            font-weight: 700;
+            font-size: 130px;
+            color: #fff;
+        }
+
+        img {
+            width: 440px;
+
+        }
+    }
+
+    button {
+        background: #F1216C;
+        color: #fff;
+        border: none;
+        outline: none;
+        font-size: 30px;
+        border-radius: 6px;
+        padding: 20px 60px;
+        cursor: pointer;
+        
+        transform: translateX(70px);
+        margin-top: -70px;
+
+        a{
+            color:#fff;
+        }
+        &:hover{
+            background: #cc1d5c;
+        }
+    }
+}

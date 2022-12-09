@@ -1,0 +1,32 @@
+.EndPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    
+    img{
+        width: 300px;
+    }
+    h1{
+        color:#fff;
+    }
+    button {
+        background: #F1216C;
+        color: #fff;
+        border: none;
+        outline: none;
+        font-size: 30px;
+        border-radius: 6px;
+        padding: 20px 60px;
+        cursor: pointer;
+
+
+        a{
+            color:#fff;
+        }
+        &:hover{
+            background: #cc1d5c;
+        }
+    }   
+}
