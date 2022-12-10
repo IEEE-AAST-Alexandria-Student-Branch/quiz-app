@@ -1,4 +1,4 @@
-Everything is done, but the "<Questions/>" component. therefor, "View my answers" isn't working.
+Everything is done, but the "Questions" component. therefor, "View my answers" isn't working.
 
 online deployment isn't working after adding "firebase" packages.
 
